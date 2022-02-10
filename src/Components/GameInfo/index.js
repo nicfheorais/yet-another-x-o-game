@@ -13,6 +13,8 @@
 import "./gameinfo.css";
 function GameInfo() {
     console.log(`In GameInfo Component`);
+    //winner can be X or O, or a draw, which means game is over (render play again button)
+    // ... or winner can be null in which case continue playing (render next player)
 
     return (
         <>

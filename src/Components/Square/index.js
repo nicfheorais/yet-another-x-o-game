@@ -7,12 +7,20 @@
 //     - Render
 //         - box => X, O, empty
 import "./square.css";
-function Square() {
+function Square({ playerMoveSymbol, handlePlayerMove }) {
     console.log(`In Square Component`);
 
+    const style = playerMoveSymbol
+        ? `squares-button ${playerMoveSymbol}-button`
+        : `squares-button`;
+
+    //TODO: replace button code with a <Button> component to abstract away the nitty-gritty of what attributenames a button needs to work
     return (
         <>
             <p>render Square stuff in here.</p>
+            <button className={style} onClick={handlePlayerMove}>
+                {playerMoveSymbol}
+            </button>
         </>
     );
 }

@@ -15,10 +15,17 @@ import Square from "../Square";
 function Board() {
     console.log(`In Board Component`);
 
+    //TODO: refactor - remove the hardcode values
+    let playerMoveSymbol = "X";
+    let handlePlayerMove = () => {};
+
     return (
         <>
             <p>render Board stuff in here.</p>
-            <Square />
+            <Square
+                playerMoveSymbol={playerMoveSymbol}
+                handlePlayerMove={handlePlayerMove}
+            />
         </>
     );
 }
