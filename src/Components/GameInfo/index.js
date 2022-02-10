@@ -10,3 +10,14 @@
 //         - whosTurn (state from Game)
 //     - Render
 //         - "you win {whosTurn}"
+import "./gameinfo.css";
+function GameInfo() {
+    console.log(`In GameInfo Component`);
+
+    return (
+        <>
+            <p>render GameInfo stuff in here.</p>
+        </>
+    );
+}
+export default GameInfo;
