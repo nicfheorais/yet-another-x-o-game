@@ -14,7 +14,7 @@ function Square({ playerMoveSymbol, handlePlayerMove }) {
         ? `squares-button ${playerMoveSymbol}-button`
         : `squares-button`;
 
-    //TODO: replace button code with a <Button> component to abstract away the nitty-gritty of what attributenames a button needs to work
+    //TODO: replace button code with a <Button> component to abstract away the nitty-gritty of what attribute names a button needs to work
     return (
         <>
             <p>render Square stuff in here.</p>

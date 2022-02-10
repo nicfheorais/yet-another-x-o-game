@@ -7,11 +7,12 @@ import GameInfo from "../GameInfo";
 function Game() {
     console.log(`In main Game Component`);
 
+    const boardArray = Array(9).fill(null); //TODO: refactor with useState
     return (
         <div>
             <p>Add code in here.</p>
             <GameInfo />
-            <Board />
+            <Board boardArray={boardArray} />
         </div>
     );
 }
