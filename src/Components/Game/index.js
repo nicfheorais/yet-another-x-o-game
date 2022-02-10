@@ -1,3 +1,5 @@
+// PLAN - from Chris Meah:
+
 import "./game.css";
 
 function Game() {
