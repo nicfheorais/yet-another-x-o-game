@@ -5,6 +5,7 @@ import "./game.css";
 import Board from "../Board";
 import GameInfo from "../GameInfo";
 
+import { check4Winner } from "./check4Winner.js";
 import { FIRST_PLAYER_SYMBOL, SECOND_PLAYER_SYMBOL } from "../../config.js";
 
 function Game() {
@@ -20,21 +21,21 @@ function Game() {
         ? FIRST_PLAYER_SYMBOL
         : SECOND_PLAYER_SYMBOL;
 
-    //Check if there's a winner yet
-    let winner = null; //TODO: refactor and calculate this.
+    // Check if there's a winner yet
+    let winner = check4Winner(boardArray); //TODO: refactor and add functionality to this - currently just returns null, as in ,no winner.
 
     function handlePlayerMove(currentSquareIndex) {
-        //if there's a winner (or a draw), or if the square is already filled, then don't do anything; just return
+        // (1) if there's a winner (or a draw), or if the square is already filled, then don't do anything; just return
         if (boardArray[currentSquareIndex] || winner) return;
 
-        // otherwise, (1) update the current board with the player's move
+        // (2) otherwise, (a) update the current board with the player's move
         setBoardArray([
             ...boardArray.slice(0, currentSquareIndex),
             currentPlayer,
             ...boardArray.slice(currentSquareIndex + 1),
         ]);
 
-        //and (2) toggle players
+        // (2) and (b) switch players
         setIsYourTurn(!isYourTurn);
     }
 

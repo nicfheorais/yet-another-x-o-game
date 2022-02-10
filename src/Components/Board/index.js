@@ -13,7 +13,7 @@ import "./board.css";
 import Square from "../Square";
 
 function Board({ boardArray, handlePlayerMove }) {
-    console.log(`In Board Component`);
+    // console.log(`In Board Component`);
 
     //let playerMoveSymbol = "X"; // NO LONGER NEEDED - map() takes care of this.
     // let handlePlayerMove = () => {}; //TODO: move to Game?
@@ -22,7 +22,7 @@ function Board({ boardArray, handlePlayerMove }) {
     //TODO: may need to change the handlePlayerMove callback function into handlePlayerMove={() => handlePlayerMove(props)} if we need to pass 'owt in.
     return (
         <div className="board">
-            <p>render Board stuff in here.</p>
+            {/* <p>DEBUG: render Board stuff in here.</p> */}
             {boardArray.map((playerMoveSymbol, currIndex) => {
                 return (
                     <Square
