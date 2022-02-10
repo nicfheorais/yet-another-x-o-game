@@ -1,11 +1,12 @@
 // PLAN - from Chris Meah:
 //
-// - Square (green circle on wireframe)
-//     - Props
-//         - value -> X, O, null
-//         - onClick
-//     - Render
-//         - box => X, O, empty
+// - Square
+//      - Props
+//          - make a move
+//      - Render
+//            - `"", X, or O`
+//
+
 import "./square.css";
 
 function Square({ currentPlayerSymbol, handlePlayerMove }) {
